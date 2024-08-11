@@ -1,5 +1,5 @@
 const sumAll = function (...args) {
-  if (args.some((num) => num < 0)) {
+  if (args.some((num) => num < 0 || !Number.isInteger(num) || !Number.isNaN)) {
     return "ERROR";
   } else {
     let total = 0;
